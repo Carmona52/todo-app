@@ -10,4 +10,3 @@ function addTask() {
   input.value = '';
   renderTasks();
 };
-
