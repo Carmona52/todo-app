@@ -1,8 +1,29 @@
-<html>
-  <header>
-    <title>Prueba De Rama Develop</title>
-  </header>
-<h1>To-Do App</h1>
-  <p>Principales Funcionalidades</p>
-  <footer></footer>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo App - Eliminar Tarea</title>
+  <link rel="stylesheet" href="app.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Lista de Tareas</h1>
+    <form id="task-form">
+      <input type="text" id="task-input" placeholder="Nueva tarea..." required />
+      <button type="submit">Agregar</button>
+    </form>
+
+    <ul id="task-list">
+      <li class="task">
+        <input type="checkbox" class="complete-checkbox" />
+        <span>Ejemplo de tarea</span>
+        <button class="complete-btn">Marcar como completada</button>
+        <button class="delete-btn">Eliminar</button>
+      </li>
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
