@@ -1,3 +1,16 @@
+let tasks = [];
+let currentFilter = 'all';
+
+function addTask() {
+  const input = document.getElementById('taskInput');
+  const text = input.value.trim();
+  if (text === '') return;
+
+  tasks.push({ text, completed: false });
+  input.value = '';
+  renderTasks();
+};
+
 function markComplete(taskElement) {
   taskElement.classList.toggle('completed');
   
@@ -21,16 +34,3 @@ document.querySelectorAll('.complete-checkbox').forEach(checkbox => {
     markComplete(this.closest('.task'));
   });
 });
-
-let tasks = [];
-let currentFilter = 'all';
-
-function addTask() {
-  const input = document.getElementById('taskInput');
-  const text = input.value.trim();
-  if (text === '') return;
-
-  tasks.push({ text, completed: false });
-  input.value = '';
-  renderTasks();
-};
